@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+
+{% block body %}
+
+{% include 'index/hero.html' %}
+{% include 'index/services.html' %}
+{% include 'index/contact.html' %}
+
+{% endblock %}

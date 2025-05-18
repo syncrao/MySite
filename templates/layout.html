@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    {% block head %} {% endblock %}
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Shah Rukh Rao</div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <script>
+        const navLinks = document.getElementById("navLinks");
+        const hamburger = document.getElementById("hamburger");
+
+        function toggleMenu() {
+            navLinks.classList.toggle("active");
+            hamburger.classList.toggle("active");
+        }
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                hamburger.classList.remove("active");
+            });
+        });
+
+        window.addEventListener("scroll", () => {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("active");
+        });
+    </script>
+
+    {% block body %} {% endblock %}
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Me</h3>
+                <p>I'm a passionate developer offering web and AI-powered solutions to help bring your ideas to life.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: youremail@example.com</p>
+                <p>Phone: +91-9269562264</p>
+                <div class="social-icons">
+                    <a href="#" target="_blank">🔗</a>
+                    <a href="#" target="_blank">🐦</a>
+                    <a href="#" target="_blank">📸</a>
+                    <a href="#" target="_blank">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 ShahRukhRao. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>
