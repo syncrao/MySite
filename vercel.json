@@ -1,11 +1,6 @@
 {
   "builds": [
     {
-      "src": "requirements.txt",
-      "use": "@vercel/python",
-      "config": { "installCommand": "pip install -r requirements.txt" }
-    },
-    {
       "src": "mysite/vercel_wsgi.py",
       "use": "@vercel/python"
     }
