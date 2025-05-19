@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% load static %}
-{% block title %}Home{% endblock %}
+{% block title %}{% endblock %}
 {% block head %}
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 {% endblock %}
@@ -10,6 +10,7 @@
 
 {% include 'index/hero.html' %}
 {% include 'index/services.html' %}
+{% include 'index/pricing.html' %}
 {% include 'index/contact.html' %}
 
 {% endblock %}

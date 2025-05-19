@@ -3,22 +3,22 @@
     <div class="hero-left">
         <h1>We Build Trust. Create Fast & Secure Software. Grow Your Business.</h1>
     <p>
-        From websites and web applications to mobile apps and Web3 blockchain solutions — we craft digital products that
+    From websites and web applications to mobile apps and Web3 blockchain solutions — we craft digital products that
         drive growth.
     </p>
     <a href="#contact" class="cta-button">Let’s Work Together</a>
     </div>
     <div class="hero-right">
-        <div id="lottie-animation" style="width: 400px; height: 400px;"></div>
+        <div id="hero-lottie" style="width: 400px; height: 400px;"></div>
         <script>
-            const animation = lottie.loadAnimation({
-                container: document.getElementById('lottie-animation'),
+            const heroAnimation = lottie.loadAnimation({
+                container: document.getElementById('hero-lottie'),
                 renderer: 'svg',
                 loop: true,
                 autoplay: true,
                 path: "{% static 'lottie/hero-1.json' %}"
             });
-            animation.setSpeed(0.2)
+            heroAnimation.setSpeed(0.2)
         </script>
     </div>
 </div>

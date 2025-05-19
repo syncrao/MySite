@@ -1,0 +1,28 @@
+<div class="container">
+   
+    <header class="section-header">
+        <h1>Our Pricing</h1>
+    </header>
+    <div class="pricing-plan-row">
+        {% for item in pricing %}
+        <section class="pricing-card">
+            <header class="pricing-card-header">
+                <span class="title">{{ item.title }}</span>
+                <div class="circle">
+                    <span class="price"><i>$</i>{{ item.price }}</span>
+                    <span class="desc">/ project</span>
+                </div>
+            </header>
+            <main class="pricing-card-body">
+                 <div class="pricing-feature">
+                    <p><b>{{ item.note }}</b></p>
+                    {% for feature in item.features %}
+                    <p>✔ {{ feature }}</p>
+                    {% endfor %}
+                 </div>
+                <button class="buy-btn">Select Plan</button>
+            </main>
+        </section>
+        {% endfor %}
+    </div>
+</div>

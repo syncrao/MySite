@@ -1,0 +1,53 @@
+{% load static %}
+<nav>
+
+    <div class="logo">
+        <div id="logo-lottie" style="width: 40px; height: 40px;"></div>
+        <span class="logo-title">SyncRao</span>
+        <script>
+            const logoAnimation = lottie.loadAnimation({
+                container: document.getElementById('logo-lottie'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: "{% static 'lottie/logo.json' %}"
+            });
+            logoAnimation.setSpeed(3)
+        </script>
+        
+    </div>
+
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<script>
+    const navLinks = document.getElementById("navLinks");
+    const hamburger = document.getElementById("hamburger");
+
+    function toggleMenu() {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+    }
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("active");
+        });
+    });
+
+    window.addEventListener("scroll", () => {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("active");
+    });
+</script>
