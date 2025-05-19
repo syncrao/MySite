@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-pi#m1nnm*1k*&5_%j%!hk6e9rdbipzh$0u8(1n&$e3t2-^=0_q
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['syncrao.vercel.app']
 
 
 INSTALLED_APPS = [
