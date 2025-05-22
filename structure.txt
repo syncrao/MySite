@@ -1,0 +1,43 @@
+.
+├── api
+│   └── index.py
+├── db.sqlite3
+├── env
+│   ├── bin
+│   ├── include
+│   ├── lib
+│   ├── lib64 -> lib
+│   └── pyvenv.cfg
+├── LICENSE
+├── manage.py
+├── mysite
+│   ├── asgi.py
+│   ├── data
+│   ├── __init__.py
+│   ├── __pycache__
+│   ├── settings.py
+│   ├── urls.py
+│   ├── views.py
+│   └── wsgi.py
+├── README.md
+├── requirements.txt
+├── static
+│   ├── css
+│   ├── images
+│   ├── lottie
+│   └── Project Files
+├── staticfiles
+│   ├── admin
+│   ├── css
+│   ├── images
+│   ├── lottie
+│   └── Project Files
+├── structure.txt
+├── templates
+│   ├── index
+│   ├── index.html
+│   ├── layout
+│   └── layout.html
+└── vercel.json
+
+24 directories, 17 files
