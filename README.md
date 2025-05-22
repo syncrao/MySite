@@ -4,12 +4,7 @@
 
 > 💡 SyncRao is currently a personal brand and may be formally registered in the future as demand grows.
 
----
 
-## 🚀 About SyncRao
-
-**SyncRao** is a development brand started by Shahrukh Chhimpa to build and showcase freelance projects and client solutions.  
-This website acts as a portfolio, service portal, and a base for future company-level expansion.
 
 ---
 
@@ -71,3 +66,9 @@ For project inquiries, collaborations, or freelance hiring:
 ---
 
 
+## 🚀 About SyncRao
+
+**SyncRao** is a development brand started by Shahrukh Chhimpa to build and showcase freelance projects and client solutions.  
+This website acts as a portfolio, service portal, and a base for future company-level expansion.
+
+---
