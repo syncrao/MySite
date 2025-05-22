@@ -1,7 +1,6 @@
 # MySite
 
-**MySite** is a personal service website built using Django.  
-It is part of the **SyncRao** initiative — a personal freelance brand focused on delivering high-quality web and mobile development services.
+**SyncRao** is a personal freelance brand, and this website serves as its online presence to showcase my development projects and services
 
 > 💡 SyncRao is currently a personal brand and may be formally registered in the future as demand grows.
 
