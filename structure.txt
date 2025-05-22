@@ -1,6 +1,4 @@
 .
-├── api
-│   └── index.py
 ├── db.sqlite3
 ├── env
 │   ├── bin
@@ -40,4 +38,4 @@
 │   └── layout.html
 └── vercel.json
 
-24 directories, 17 files
+23 directories, 16 files
