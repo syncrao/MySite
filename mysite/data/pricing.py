@@ -1,7 +1,8 @@
 pricing = [
         {
             'title': 'Website Development',
-            'price': 200,
+            'price': 199,
+            'rupee': 14999,
             'note': 'Basic responsive website',
             'features': [
                 'Up to 5 pages',
@@ -12,7 +13,8 @@ pricing = [
         },
         {
             'title': 'Mobile App Development',
-            'price': 500,
+            'price': 299,
+            'rupee': 22999,
             'note': 'Cross-platform mobile app',
             'features': [
                 'iOS & Android',
@@ -23,7 +25,8 @@ pricing = [
         },
         {
             'title': 'Ecommerce Website',
-            'price': 800,
+            'price': 499,
+            'rupee': 41999,
             'note': 'Online store setup',
             'features': [
                 'Product catalog',
@@ -34,7 +37,8 @@ pricing = [
         },
         {
             'title': 'Portfolio Website',
-            'price': 150,
+            'price': 123,
+            'rupee': 9999,
             'note': 'Showcase your work',
             'features': [
                 'Project gallery',
