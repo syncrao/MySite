@@ -5,20 +5,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}"/>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}" />
     <meta name="description" content="Full-stack web & mobile developer building fast and secure digital solutions." />
     <meta property="og:title" content="SyncRao | Web & App Developer" />
     <meta property="og:description" content="Custom websites, apps & AI solutions." />
     <meta property="og:image" content="{% static 'images/preview.jpg' %}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <title>SyncRao{% block title %} {% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <script>
+        const timestamp = new Date().getTime();
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.href = "{% static 'css/layout.css' %}?v=" + timestamp;
+        document.head.appendChild(link);
+    </script>
+
+    <!-- <link rel="stylesheet" href="{% static 'css/layout.css' %}"> -->
     {% block head %} {% endblock %}
 </head>
 
 <body>
     {% include 'layout/navbar.html' %}
+    <div class="main">
     {% block body %} {% endblock %}
+    </div>
     {% include 'layout/footer.html' %}
 </body>
 

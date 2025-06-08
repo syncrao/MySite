@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-pi#m1nnm*1k*&5_%j%!hk6e9rdbipzh$0u8(1n&$e3t2-^=0_q')
 
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+DEBUG =  os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = ["*"]
 
@@ -16,11 +16,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # For serving static files
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -34,7 +35,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],  # You're using custom templates
+        'DIRS': [BASE_DIR / 'templates'],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,3 +84,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users.CustomUser'
+
+AUTHENTICATION_BACKENDS = [
+    'users.auth_backend.EmailOrUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend',  
+]
+
+
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30  
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False

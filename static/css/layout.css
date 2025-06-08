@@ -1,7 +1,37 @@
  body {
      margin: 0;
-     font-family: 'Segoe UI', sans-serif;
      overflow-x: hidden;
+ }
+
+ .main {
+    min-height: 75vh;
+    margin: 1rem 4rem;
+ }
+
+ .link {
+    text-decoration: none;
+    color: #333;
+ }
+
+ .text-center {
+    text-align: center;
+ }
+
+ .pm-0 {
+    margin: 0.4rem;
+    padding: 0;
+ }
+
+  .pm-1 {
+    margin: 1rem;
+    padding: 1rem;
+ }
+
+ .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
  }
 
  nav {
@@ -151,6 +181,10 @@
          padding: 1rem 2rem;
      }
 
+     .main {
+        margin: 0rem, 0rem;
+     }
+
      .nav-links {
          display: none;
          position: absolute;
@@ -173,3 +207,43 @@
          display: flex;
      }
  }
+
+.contact-link {
+  text-decoration: none;
+  transition: text-decoration 0.2s;
+}
+.contact-link.email {
+  color: #007BFF;
+}
+.contact-link.phone {
+  color: #28a745;
+}
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.submit-btn {
+  width: 150px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 41px;
+  border-radius: 49px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+.transparent {
+  margin: 0;
+  border: 2px solid #000000;
+  background-color: transparent;
+  color: #000;
+  height: 41px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}

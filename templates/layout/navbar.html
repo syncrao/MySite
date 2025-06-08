@@ -1,21 +1,23 @@
 {% load static %}
 <nav>
+    <a href="{% url 'index' %}" class="link">
+        <div class="logo" class="center">
+            <div id="logo-lottie" style="width: 40px; height: 40px;"></div>
+            <span class="logo-title">SyncRao</span>
+        </div>
+    </a>
 
-    <div class="logo">
-        <div id="logo-lottie" style="width: 40px; height: 40px;"></div>
-        <span class="logo-title">SyncRao</span>
-        <script>
-            const logoAnimation = lottie.loadAnimation({
-                container: document.getElementById('logo-lottie'),
-                renderer: 'svg',
-                loop: true,
-                autoplay: true,
-                path: "{% static 'lottie/logo.json' %}"
-            });
-            logoAnimation.setSpeed(3)
-        </script>
-        
-    </div>
+    <script>
+        const logoAnimation = lottie.loadAnimation({
+            container: document.getElementById('logo-lottie'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: "{% static 'lottie/logo.json' %}"
+        });
+        logoAnimation.setSpeed(3);
+    </script>
+
 
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
         <div></div>
@@ -27,6 +29,16 @@
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="center"> <i class="fas fa-sign-out-alt"></i>Logout {{user.username}}</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="center">
+            <i class="fas fa-sign-in-alt"></i> Login
+        </a>
+        <a href="{% url 'register' %}" class="center">
+            <i class="fas fa-user-plus"></i> Register
+        </a>
+        {% endif %}
     </div>
 </nav>
 

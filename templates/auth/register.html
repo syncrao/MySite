@@ -1,0 +1,70 @@
+{% extends '../layout/layout.html' %}
+{% load static %}
+{% block title %}/register/{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
+
+{% block body %}
+<div class="auth-container">
+  <div class="auth center">
+    <div class="auth-right">
+      <form method="post" action="{% url 'register' %}" class="sign-in-form">
+        {% csrf_token %}
+
+        <h2 class="title">Register</h2>
+
+
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <div class="input-div center">
+          <div class="input-field">
+            <i class="fas fa-user-tag"></i>
+            <input type="text" name="first_name" placeholder="First Name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user-tag"></i>
+            <input type="text" name="last_name" placeholder="Last Name" required />
+          </div>
+        </div>
+
+        <div class="input-field">
+          <i class="fas fa-user"></i>
+          <input type="text" name="username" placeholder="Username" required />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" name="email" placeholder="Email" required />
+        </div>
+        <div class="input-field">
+          <i class="fas fa-calendar"></i>
+          <input type="date" name="date_of_birth" required />
+        </div>
+
+        <div class="input-div center">
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password1" placeholder="Password" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" name="password2" placeholder="Confirm Password" required />
+          </div>
+        </div>
+
+        <input type="submit" value="Register" class="submit-btn" />
+      </form>
+    </div>
+    <div class="auth-left center" style="text-align: center; padding: 2rem;">
+      <p class="pm-0">Already have an account ? <br /> Login with your username or email to use all site features.
+      </p>
+      <button class="submit-btn transparent" id="sign-up-btn" onclick="window.location.href='{% url 'login' %}'">
+        Login now
+      </button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
