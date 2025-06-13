@@ -61,7 +61,7 @@ For project inquiries, collaborations, or freelance hiring:
 * **Brand:** SyncRao
 * **Email:** [raosync@gmail.com](mailto:raosync@gmail.com)
 * **Phone:** +91-9269562264
-* **GitHub:** [github.com/raoshah](https://github.com/raoshah)
+* **GitHub:** [github.com/syncrao](https://github.com/syncrao)
 
 ---
 
