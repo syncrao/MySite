@@ -3,10 +3,6 @@
      overflow-x: hidden;
  }
 
- .main {
-    min-height: 75vh;
-    margin: 1rem 4rem;
- }
 
  .link {
     text-decoration: none;
