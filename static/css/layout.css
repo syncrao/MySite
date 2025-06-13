@@ -243,3 +243,8 @@
   font-weight: 600;
   font-size: 0.8rem;
 }
+
+.idTag {
+    margin-bottom: 2rem;
+    background-color: #00bcd4;
+}
